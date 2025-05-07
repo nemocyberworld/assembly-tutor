@@ -23,6 +23,7 @@ assembly-tutor
 ├── __pycache__            # Cached Python files
 └── README.md              # Project documentation
 ```
+![1746619230024](image/README/1746619230024.png)
 
 ### Lessons Overview
 
@@ -52,6 +53,7 @@ assembly-tutor
 * **Compression Formats** : Exploring how different file formats (JPEG, PNG, PDF) are encoded.
 * **Malware Signature** : Identifying malware based on byte patterns.
 * **DNS Queries** : Analyzing DNS traffic and understanding the DNS protocol.
+![1746619311536](image/README/1746619311536.png)
 
 #### 5.  **Practice Problems** :
 
@@ -78,7 +80,7 @@ To start the tutor, simply run the `launcher.py` script:
 ```bash
 python launcher.py
 ```
-
+![1746619437512](image/README/1746619437512.png)
 This will prompt you to select a lesson and guide you through it. Each lesson will have its own set of instructions and examples, along with quizzes or practice problems for reinforcement.
 
 ## Contributing
