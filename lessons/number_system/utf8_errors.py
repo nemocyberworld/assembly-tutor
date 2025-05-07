@@ -104,10 +104,12 @@ def summary():
     slow_print(f"✔ Understanding these concepts ensures you can effectively manage encoding issues in your applications.")
     print(f"{GREEN}Keep practicing, and you’ll become a UTF-8 expert! 🎉{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+def run():
     intro()
     explain_utf8_encoding()
     demonstrate_invalid_utf8()
     handle_utf8_errors()
     quiz()
     summary()
+if __name__ == "__main__":
+    run()

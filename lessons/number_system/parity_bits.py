@@ -64,7 +64,6 @@ def demo_parity():
     else:
         print(f"{RED}❌ Error! Parity check failed.{RESET}")
 
-    # Let's simulate an error
     index_to_flip = random.randint(0, 8)
     corrupted = list(with_parity)
     corrupted[index_to_flip] = '1' if corrupted[index_to_flip] == '0' else '0'
@@ -107,9 +106,13 @@ def summary():
     print("✔ Used in memory, communications, and networks to detect transmission errors.{RESET}")
     print(f"\n{GREEN}You’ve mastered parity bits! 🎉👾{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     print_intro()
     explain_parity()
     demo_parity()
     user_challenge()
     summary()
+
+if __name__ == "__main__":
+    run()

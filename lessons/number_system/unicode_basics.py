@@ -86,10 +86,14 @@ def summary():
     slow_print("✔ Python uses Unicode strings by default")
     print(f"{GREEN}Now you're ready to decode the world's text! 🌍{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     unicode_explained()
     show_unicode_examples()
     encode_decode_demo()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

@@ -84,10 +84,13 @@ def summary():
     slow_print("✔ Python uses UTF-8 by default, so you’re already using it!")
     print(f"{GREEN}Keep exploring the world of characters — from A to 😄!{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+def run():
     intro()
     utf8_demo()
     utf8_explain()
     interactive_encode()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

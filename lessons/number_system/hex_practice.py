@@ -1,5 +1,3 @@
-# lessons/basics/hex_practice.py
-
 import time
 
 # 🎨 Terminal Colors
@@ -111,10 +109,14 @@ def summary():
     slow_print(f"✔ Mastering these conversions helps you interpret debug values and work with different data formats in programming.")
     print(f"{GREEN}Great job! You’re well on your way to mastering Hexadecimal conversions and debug reading! 🎉{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     hex_to_decimal()
     decimal_to_hex()
     binary_to_hex()
     debug_reading()
     summary()
+
+if __name__ == "__main__":
+    run()

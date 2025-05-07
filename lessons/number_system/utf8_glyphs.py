@@ -90,10 +90,13 @@ def summary():
     slow_print(f"✔ We learned how to visualize and work with multibyte characters and how to encode and decode them.")
     print(f"{GREEN}You’re on your way to becoming a UTF-8 pro! Keep exploring and experimenting with multibyte characters! 🎉{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+def run():
     intro()
     explain_utf8_multibyte()
     show_multibyte_characters()
     demonstrate_encoding_decoding()
     quiz()
     summary()
+if __name__ == "__main__":
+    run()
+

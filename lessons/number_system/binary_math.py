@@ -18,14 +18,13 @@ def slow_print(text, delay=0.07):
         time.sleep(delay)
     print()
 
-def explain_binary_math():
+def intro():
     print(f"\n{BOLD}{CYAN}🧠 Welcome to Binary Math Basics!{RESET}\n")
     time.sleep(0.5)
-
     slow_print(f"{YELLOW}Why learn binary math?{RESET}")
-    slow_print("👉 Because computers do math with just 1s and 0s!")
-    print()
+    slow_print("👉 Because computers do math with just 1s and 0s!\n")
 
+def lesson():
     # Binary addition
     print(f"{BOLD}{GREEN}➕ Binary Addition:{RESET}")
     slow_print("  0 + 0 = 0")
@@ -79,14 +78,18 @@ def explain_binary_math():
     slow_print(f"{num} << 1 = {shift_left} (binary: {bin(shift_left)})")
     slow_print(f"{num} >> 1 = {shift_right} (binary: {bin(shift_right)})\n")
 
-    # Recap
+def summary():
     print(f"{BOLD}{GREEN}🎉 Summary:{RESET}")
     slow_print("✅ You learned how to add, subtract, multiply, and divide in binary.")
     slow_print("✅ You saw the magic of bit shifting (fast math!).")
     slow_print("✅ Now you're thinking like a CPU 🧠💻!\n")
-
     slow_print(f"{BOLD}{MAGENTA}Next Stop: Bitwise Logic Operators! 🚀{RESET}\n")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-# Run this lesson
+
+def run():
+    intro()
+    lesson()
+    summary()
+
 if __name__ == "__main__":
-    explain_binary_math()
+    run()

@@ -1,5 +1,3 @@
-# lessons/basics/hex_intro.py
-
 import time
 import random
 
@@ -85,8 +83,12 @@ def review():
     print("✔ Use format(n, 'X') to get uppercase hex in Python")
     print("✔ Hex is cleaner than binary for large numbers{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_hex()
     hex_quiz()
     review()
+
+if __name__ == "__main__":
+    run()

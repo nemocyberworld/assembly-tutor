@@ -99,7 +99,11 @@ def summary():
     slow_print(f"✔ With practice, you'll get more comfortable with character encoding and decoding!")
     print(f"{GREEN}Great job completing the challenge! 🎉 Keep practicing, and soon decoding will be second nature!{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     practice_guessing_game()
     summary()
+
+if __name__ == "__main__":
+    run()

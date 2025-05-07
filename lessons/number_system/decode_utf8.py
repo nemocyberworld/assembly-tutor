@@ -121,10 +121,14 @@ def summary():
     slow_print(f"✔ We manually decode the byte sequence by interpreting the bit patterns.")
     print(f"{GREEN}You’re now ready to decode UTF-8 byte sequences like a pro! 🎉{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_utf8_encoding()
     byte_sequence_examples()
     interactive_decoding()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

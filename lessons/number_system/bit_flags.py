@@ -14,6 +14,7 @@ BOLD = "\033[1m"
 RESET = "\033[0m"
 
 def slow_print(text, delay=0.07):
+    """Prints text slowly with a delay between each character."""
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
@@ -21,11 +22,13 @@ def slow_print(text, delay=0.07):
     print()
 
 def print_intro():
+    """Prints the introduction to the Bit Flags lesson."""
     slow_print(f"{BOLD}{MAGENTA}🧠 Welcome to Bit Flags: Control Multiple Settings with Just One Number! 🏁{RESET}")
     slow_print(f"{CYAN}\nImagine having multiple switches (ON/OFF) — instead of separate variables, you can use bits! 🪄")
     slow_print(f"Each bit represents a flag: 1 = ON, 0 = OFF.{RESET}")
 
 def define_flags():
+    """Defines and prints common bit flags."""
     slow_print(f"\n{BLUE}🎯 Let’s define our flags using binary positions:{RESET}")
     FLAG_SOUND = 0b0001        # Bit 0
     FLAG_FULLSCREEN = 0b0010   # Bit 1
@@ -40,6 +43,7 @@ def define_flags():
     return FLAG_SOUND, FLAG_FULLSCREEN, FLAG_DEBUG, FLAG_VSYNC
 
 def demo_flags():
+    """Demonstrates setting, toggling, and clearing bit flags."""
     FLAG_SOUND, FLAG_FULLSCREEN, FLAG_DEBUG, FLAG_VSYNC = define_flags()
 
     settings = 0b0000
@@ -66,10 +70,12 @@ def demo_flags():
     print_flag_status("VSYNC", settings, FLAG_VSYNC)
 
 def print_flag_status(name, settings, flag):
+    """Prints whether a specific flag is ON or OFF."""
     status = f"{GREEN}ON{RESET}" if settings & flag else f"{RED}OFF{RESET}"
     slow_print(f"{name:<12}: {status}")
 
 def user_test():
+    """Allows the user to input flags interactively and shows the resulting settings."""
     slow_print(f"\n{BOLD}{MAGENTA}🎮 Try Setting Flags Yourself!{RESET}")
     slow_print(f"{CYAN}Enter flags you want ON (comma-separated): SOUND, FULLSCREEN, DEBUG, VSYNC{RESET}")
     input_flags = input(f"{YELLOW}Your flags: {RESET}").upper().split(',')
@@ -97,14 +103,21 @@ def user_test():
         print_flag_status(name, settings, bit)
 
 def summary():
+    """Prints a summary of the lesson and reviews bitwise flag operations."""
     slow_print(f"\n{BOLD}{BLUE}🔚 Summary:{RESET}")
     slow_print(f"{CYAN}✔ Use individual bits to store multiple ON/OFF states in a single number.")
     slow_print(f"✔ Use `|` to turn ON, `&` to check, `^` to toggle, and `& ~` to turn OFF flags.")
     slow_print(f"✔ Bit flags are used in games, drivers, settings, and embedded systems!{RESET}")
     slow_print(f"\n{GREEN}Well done, you now wield the power of binary flags! 🧙‍♂️🪄{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
+    """Runs the Bit Flags lesson."""
     print_intro()
     demo_flags()
     user_test()
     summary()
+
+# Run the lesson
+if __name__ == "__main__":
+    run()

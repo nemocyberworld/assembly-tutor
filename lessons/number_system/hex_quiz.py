@@ -1,5 +1,3 @@
-# lessons/basics/hex_quiz.py
-
 import time
 import random
 
@@ -85,9 +83,13 @@ def summary():
     slow_print("✔ Hex decoding is a handy skill for debugging, security, and fun puzzles!")
     print(f"{GREEN}Keep decoding — the world is full of secret messages! 🔐{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     show_example()
     interactive_challenge()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

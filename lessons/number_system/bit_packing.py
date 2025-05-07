@@ -14,6 +14,7 @@ BOLD = "\033[1m"
 RESET = "\033[0m"
 
 def slow_print(text, delay=0.07):
+    """Prints text slowly with a delay between characters."""
     for char in text:
         sys.stdout.write(char)
         sys.stdout.flush()
@@ -21,6 +22,7 @@ def slow_print(text, delay=0.07):
     print()
 
 def print_intro():
+    """Prints the introduction to bit packing."""
     slow_print(f"{BOLD}{MAGENTA}🧳 Welcome to Bit Packing! 🧠{RESET}")
     slow_print(f"{CYAN}Sometimes we want to fit multiple values into a single byte (8 bits)...")
     slow_print("It’s like stuffing socks, snacks, and a phone all into one pocket! 🧦🍫📱{RESET}")
@@ -30,15 +32,18 @@ def print_intro():
     slow_print("- 2 bits for Blue (0–3){RESET}")
 
 def pack_color(red, green, blue):
+    """Packs red, green, and blue values into a single byte."""
     return ((red & 0b111) << 5) | ((green & 0b111) << 2) | (blue & 0b11)
 
 def unpack_color(byte):
+    """Unpacks a single byte into red, green, and blue values."""
     red = (byte >> 5) & 0b111
     green = (byte >> 2) & 0b111
     blue = byte & 0b11
     return red, green, blue
 
 def demo_packing():
+    """Demonstrates packing and unpacking of RGB values."""
     slow_print(f"\n{MAGENTA}🎨 Let’s Pack Some Colors!{RESET}")
     red = 5   # 101
     green = 3 # 011
@@ -55,6 +60,7 @@ def demo_packing():
     slow_print(f"🔵 Blue  = {unpacked_blue}")
 
 def user_test():
+    """Lets the user try packing and unpacking their own RGB values."""
     slow_print(f"\n{BOLD}{MAGENTA}🎮 Try Packing Your Own Color!{RESET}")
     try:
         red = int(input(f"{YELLOW}Enter Red (0–7): {RESET}"))
@@ -74,6 +80,7 @@ def user_test():
         slow_print(f"{RED}❌ Invalid input. Please enter numbers only.{RESET}")
 
 def summary():
+    """Prints a summary of what was learned in the bit packing lesson."""
     slow_print(f"\n{BOLD}{BLUE}🔚 Summary:{RESET}")
     slow_print(f"{CYAN}✔ Bit packing saves space by storing multiple small values in one byte.")
     slow_print("✔ Use shifts (<<) and bitwise OR (|) to pack.")
@@ -82,8 +89,13 @@ def summary():
     slow_print(f"\n{GREEN}Great job learning how to pack bits like a pro! 🎒✨{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
 
-if __name__ == "__main__":
+def run():
+    """Runs the Bit Packing lesson."""
     print_intro()
     demo_packing()
     user_test()
     summary()
+
+# Run the lesson
+if __name__ == "__main__":
+    run()

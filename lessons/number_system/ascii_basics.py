@@ -27,13 +27,14 @@ def intro():
 
 def show_ascii_table():
     print(f"\n{BOLD}{BLUE}📊 ASCII Table Highlights (A–Z, a–z, 0–9){RESET}")
+    slow_print(f"{CYAN}Here's how characters map to numbers in ASCII:")
     for ch in "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789":
         print(f"{YELLOW}'{ch}'{RESET} = {GREEN}{ord(ch)}{RESET}")
         time.sleep(0.01)
 
 def char_to_ascii():
     print(f"\n{BOLD}{MAGENTA}🔡 Convert Characters to ASCII{RESET}")
-    text = input(f"{YELLOW}Enter text: {RESET}").strip()
+    text = input(f"{YELLOW}Enter some text: {RESET}").strip()
     print(f"{CYAN}ASCII Codes:{RESET}")
     for ch in text:
         print(f"'{ch}' → {GREEN}{ord(ch)}{RESET}")
@@ -45,7 +46,10 @@ def ascii_to_char():
     for code in codes:
         try:
             num = int(code)
-            print(chr(num), end='')
+            if 0 <= num <= 127:
+                print(chr(num), end='')
+            else:
+                print(f"{RED} ? {RESET}", end='')
         except:
             print(f"{RED} ? {RESET}", end='')
     print(RESET)
@@ -88,13 +92,18 @@ def summary():
     print(f"\n{BOLD}{BLUE}📘 Summary:{RESET}")
     slow_print(f"{CYAN}✔ ASCII stands for American Standard Code for Information Interchange")
     slow_print("✔ Each character is stored as a number from 0 to 127")
-    slow_print("✔ Use `ord()` to convert char → number, and `chr()` for number → char")
+    slow_print("✔ Use `ord()` to convert characters to numbers")
+    slow_print("✔ Use `chr()` to convert numbers back to characters")
     print(f"{GREEN}ASCII is the ABC of digital text — now you know how to speak computer! 🤖{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     show_ascii_table()
     char_to_ascii()
     ascii_to_char()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

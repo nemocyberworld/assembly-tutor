@@ -1,5 +1,3 @@
-# lessons/basics/hex_instruction_map.py
-
 import time
 import random
 
@@ -101,9 +99,13 @@ def summary():
     slow_print("✔ x86 has a large instruction set; today you learned the most common ones!")
     print(f"{GREEN}Great job! Now you're starting to read the language of CPUs! 🚀{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     opcode_demo()
     interactive_decoder()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

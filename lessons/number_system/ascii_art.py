@@ -32,12 +32,12 @@ def ascii_art_intro():
     print(f"{YELLOW}Example of a simple ASCII art triangle:{RESET}")
     slow_print(f"{CYAN}\n     ^\n    / \\\n   /   \\\n  /_____\\", 0.1)
     slow_print(f"\n{CYAN}Amazing, right? Let’s try creating some more complex designs together!")
-    
+
 def create_ascii_face():
     print(f"\n{BOLD}{MAGENTA}😀 Let's Create an ASCII Face!{RESET}")
     slow_print(f"{CYAN}Let's build a simple face using characters!")
-    
-    face = """
+
+    face1 = """
      _______
     /       \\
    |  O   O  |
@@ -46,10 +46,10 @@ def create_ascii_face():
     \_______/
     """
     slow_print(f"\n{YELLOW}Here’s a fun ASCII face:{RESET}")
-    print(f"{CYAN}{face}{RESET}")
-    
-    slow_print(f"\n{CYAN}You can adjust this face by changing the characters! For example, try modifying the eyes to make them look different. Let's try it!")
-    face = """
+    print(f"{CYAN}{face1}{RESET}")
+
+    slow_print(f"\n{CYAN}Now let’s modify it a bit—how about changing the eyes?")
+    face2 = """
      _______
     /       \\
    |  X   X  |
@@ -57,16 +57,16 @@ def create_ascii_face():
    |   '-'   |
     \_______/
     """
-    print(f"\n{CYAN}{face}{RESET}")
-    slow_print(f"\n{CYAN}Look at how small changes make a big difference! You can experiment with different characters to express creativity.")
+    print(f"\n{CYAN}{face2}{RESET}")
+    slow_print(f"\n{CYAN}See how small tweaks can totally change the expression? Try experimenting with your own ideas!")
 
 def printable_limits():
     print(f"\n{BOLD}{CYAN}⚖️ Printable Character Limits{RESET}")
     slow_print(f"{CYAN}Now, let’s understand the limits of printable characters in ASCII art.")
     slow_print(f"{CYAN}ASCII printable characters range from 32 (space) to 126 (~). These include letters, numbers, punctuation marks, and symbols.")
-    slow_print(f"{CYAN}Any character below 32 is a control character (such as newline or tab), and cannot be used for visual art.")
-    
-    print(f"\n{GREEN}Let’s print the range of printable ASCII characters:{RESET}")
+    slow_print(f"{CYAN}Characters below 32 are control codes like newline and tab—they aren’t visible and can't be used for visual art.")
+
+    print(f"\n{GREEN}Let’s print all printable ASCII characters:{RESET}")
     for i in range(32, 127):
         print(chr(i), end=' ')
     print("\n")
@@ -74,7 +74,7 @@ def printable_limits():
 def ascii_art_challenge():
     print(f"\n{BOLD}{YELLOW}🎮 ASCII Art Challenge!{RESET}")
     slow_print(f"{CYAN}It’s your turn! Can you create an ASCII art of a simple object using only printable characters?")
-    slow_print(f"{CYAN}Try making a house or a tree. Here's an idea to start with:")
+    slow_print(f"{CYAN}Try making a house, tree, or anything else. Here’s a sample house to get inspired:")
 
     house = """
       /\    
@@ -86,44 +86,44 @@ def ascii_art_challenge():
   |________|
     """
     slow_print(f"\n{CYAN}{house}{RESET}")
-    
-    slow_print(f"\n{CYAN}Now, take some time to make your own design! You can try creating it below.")
-    input(f"{YELLOW}Press Enter to submit your creation... {RESET}")
+
+    input(f"\n{YELLOW}Now try making your own ASCII art below! Press Enter when you're ready... {RESET}")
 
 def ascii_art_quiz():
     print(f"\n{BOLD}{MAGENTA}🎮 ASCII Art Quiz Time!{RESET}")
     score = 0
-    
+
     questions = [
-        ("Which of these is a valid ASCII art character?", "A"),
+        ("Which of these is a valid ASCII art character? (A) @ (B) \x07 (C) NULL", "A"),
         ("How many printable characters are there in ASCII?", "95"),
-        ("Which character cannot be used in ASCII art?", "BEL"),
+        ("Which character cannot be used in ASCII art? (A) ! (B) # (C) BEL", "C"),
     ]
-    
-    for i, (q, a) in enumerate(questions, 1):
-        user = input(f"{YELLOW}Q{i}: {q} {RESET}").strip()
-        if user.lower() == a.lower():
+
+    for i, (q, correct_answer) in enumerate(questions, 1):
+        user = input(f"{YELLOW}Q{i}: {q} {RESET}").strip().upper()
+        if user == correct_answer.upper():
             print(f"{GREEN}✅ Correct!{RESET}")
             score += 1
         else:
-            print(f"{RED}❌ Incorrect! The correct answer is: {GREEN}{a}{RESET}")
-    
+            print(f"{RED}❌ Incorrect! The correct answer is: {GREEN}{correct_answer}{RESET}")
+
     print(f"\n{BOLD}{CYAN}🏁 Quiz Complete! Your score: {score}/3{RESET}")
     if score == 3:
         print(f"{GREEN}🎉 Perfect! You're an ASCII artist now!{RESET}")
-    elif score >= 2:
+    elif score == 2:
         print(f"{YELLOW}👍 Well done! Keep practicing your ASCII art!{RESET}")
     else:
-        print(f"{RED}💡 No worries! Keep practicing and experimenting!{RESET}")
+        print(f"{RED}💡 No worries! Keep experimenting and you'll improve!{RESET}")
 
 def summary():
     print(f"\n{BOLD}{BLUE}📘 Summary:{RESET}")
     slow_print(f"{CYAN}✔ ASCII art uses printable characters (letters, symbols, etc.) to create images.")
-    slow_print(f"{CYAN}✔ The printable ASCII characters range from 32 to 126, giving you plenty of room to create art.")
-    slow_print(f"{CYAN}✔ You can get creative by adjusting and combining characters for different effects, just like we did with the face.")
-    print(f"{GREEN}Keep practicing, and soon you'll be able to create amazing text art! 🎨{RESET}")
+    slow_print(f"{CYAN}✔ Printable ASCII characters range from 32 to 126—plenty for creative expression.")
+    slow_print(f"{CYAN}✔ You can design anything from faces to objects using just text!")
+    print(f"{GREEN}Keep practicing and you'll become a text art wizard in no time! 🎨{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     ascii_art_intro()
     create_ascii_face()
@@ -131,3 +131,6 @@ if __name__ == "__main__":
     ascii_art_challenge()
     ascii_art_quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

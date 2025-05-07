@@ -97,7 +97,8 @@ def summary():
     slow_print("✔ The first few bits in the byte pattern determine how many bytes are needed.")
     print(f"{GREEN}You now have a solid understanding of how UTF-8 handles multi-byte characters! 🌟{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_multi_byte_encoding()
     multi_byte_examples()
@@ -105,3 +106,6 @@ if __name__ == "__main__":
     interactive_encoding()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

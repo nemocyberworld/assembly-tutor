@@ -102,10 +102,14 @@ def summary():
     slow_print(f"{CYAN}✔ This is important for interpreting multi-byte values like integers in memory.")
     print(f"{GREEN}Keep practicing, and soon you’ll be able to handle endianness like a pro! 🧑‍💻{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     endianness_explanation()
     big_endian_vs_little_endian()
     interactive_example()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

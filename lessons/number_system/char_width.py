@@ -103,7 +103,8 @@ def summary():
     slow_print(f"{CYAN}✔ Each encoding type has its strengths depending on the context, and understanding these will help you work with different text formats effectively.")
     print(f"{GREEN}Keep practicing, and you’ll be a text encoding expert in no time! 🧠{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_fixed_width()
     explain_variable_width()
@@ -111,3 +112,6 @@ if __name__ == "__main__":
     encoding_examples()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

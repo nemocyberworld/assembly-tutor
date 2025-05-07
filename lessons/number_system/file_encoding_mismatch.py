@@ -1,5 +1,3 @@
-# lessons/basics/file_encoding_mismatch.py
-
 import time
 
 # 🎨 Terminal Colors
@@ -126,7 +124,8 @@ def summary():
     slow_print(f"✔ Python makes handling encoding problems easy with simple functions like `open()` and error handling options.")
     print(f"{GREEN}Keep learning and experimenting with encoding handling to avoid common pitfalls! 🧠{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_encoding_mismatch()
     diagnose_encoding_mismatch()
@@ -134,3 +133,6 @@ if __name__ == "__main__":
     handle_common_encoding_problems()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

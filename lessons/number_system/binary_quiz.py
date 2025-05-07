@@ -100,7 +100,11 @@ def review():
     print("✔ Bitwise OR: 1 if at least one bit is 1")
     print("✔ Practice makes perfect! 🧠🖥️{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     run_quiz()
     review()
+
+if __name__ == "__main__":
+    run()

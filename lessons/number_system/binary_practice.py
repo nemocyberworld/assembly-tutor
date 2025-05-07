@@ -78,7 +78,11 @@ def intro_message():
     slow_print(f"🧮 Bitwise operations like AND (&)")
     slow_print(f"🎯 And how binary logic works under the hood!{RESET}\n")
     input(f"{YELLOW}Press Enter to begin the challenge! {RESET}")
-    input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro_message()
     binary_quiz()
+    input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
+
+if __name__ == "__main__":
+    run()

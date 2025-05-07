@@ -83,9 +83,13 @@ def summary():
     slow_print(f"{CYAN}✔ Common assembly instruction format: MOV Register, 0xHexValue")
     print(f"{GREEN}Keep practicing with hex and assembly—you’ll be a pro in no time! 💪{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     hex_in_assembly()
     demo_instructions()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

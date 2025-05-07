@@ -96,8 +96,12 @@ def summary():
     slow_print("✔ Hex makes reading binary simpler for humans")
     print(f"{GREEN}Keep practicing—you're decoding the matrix! 🧠{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     demo_conversions()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

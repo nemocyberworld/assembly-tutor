@@ -31,7 +31,7 @@ def intro():
 def simulate_gates():
     print(f"\n{BOLD}{BLUE}🧪 Logic Gate Simulation:{RESET}")
 
-    pairs = [(0,0), (0,1), (1,0), (1,1)]
+    pairs = [(0, 0), (0, 1), (1, 0), (1, 1)]
     
     print(f"\n{CYAN}🔹 AND Gate 🔹{RESET}")
     for a, b in pairs:
@@ -91,8 +91,12 @@ def summary():
     print(f"✔ By combining gates, computers can do math, make decisions, and more!{RESET}")
     print(f"\n{GREEN}Now you understand how 1s and 0s build brains of machines! 🤖{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     simulate_gates()
     logic_quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

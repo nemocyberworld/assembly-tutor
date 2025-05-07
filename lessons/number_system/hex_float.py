@@ -1,5 +1,3 @@
-# lessons/basics/hex_float.py
-
 import struct
 import time
 import random
@@ -117,10 +115,14 @@ def summary():
     slow_print("✔ Each float = sign + exponent + mantissa (all packed into 32 bits)")
     print(f"{GREEN}Now you can decode floating point numbers like a pro! 🧠{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_ieee754()
     demo_conversions()
     interactive_decoder()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

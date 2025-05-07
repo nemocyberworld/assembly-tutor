@@ -135,10 +135,14 @@ def summary():
     slow_print(f"{CYAN}✔ We can modify these bytes to change the data in a file, which is useful for debugging and other tasks.")
     print(f"{GREEN}Keep practicing with hex editors to gain deeper control over byte-level data! 🧑‍💻{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     hex_editor_explanation()
     simulate_hex_file()
     interactive_string_modification()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

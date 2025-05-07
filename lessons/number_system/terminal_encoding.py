@@ -106,7 +106,8 @@ def summary():
     slow_print("✔ Invalid byte sequences cause decoding errors or show �.")
     print(f"{GREEN}You’re now ready to debug terminal output like a pro! 🧠{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     terminal_encoding_explained()
     utf8_demo()
@@ -114,3 +115,6 @@ if __name__ == "__main__":
     corruption_simulation()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

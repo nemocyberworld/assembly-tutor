@@ -70,8 +70,11 @@ def summary():
     slow_print(f"\n{GREEN}Now you're fluent in the language of computer negativity! 😄{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
 
-if __name__ == "__main__":
+def run():
     print_intro()
     explain_twos_complement()
     user_try()
     summary()
+
+if __name__ == "__main__":
+    run()

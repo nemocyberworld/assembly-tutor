@@ -13,12 +13,14 @@ BOLD = "\033[1m"
 RESET = "\033[0m"
 
 def slow_print(text, delay=0.07):
+    """Prints text slowly with a delay between each character."""
     for ch in text:
         print(ch, end='', flush=True)
         time.sleep(delay)
     print()
 
 def binary_to_decimal(binary_str):
+    """Converts binary string to decimal number and explains each step."""
     slow_print(f"{CYAN}🔍 Converting binary to decimal...{RESET}")
     total = 0
     for i, digit in enumerate(reversed(binary_str)):
@@ -32,6 +34,7 @@ def binary_to_decimal(binary_str):
     return total
 
 def decimal_to_binary(decimal_num):
+    """Converts decimal number to binary string and explains each step."""
     slow_print(f"{CYAN}🔁 Converting decimal to binary...{RESET}")
     if decimal_num == 0:
         slow_print(f"{GREEN}✅ Binary: 0b0{RESET}")
@@ -47,7 +50,8 @@ def decimal_to_binary(decimal_num):
     slow_print(f"\n{GREEN}✅ Binary: 0b{binary_str}{RESET}\n")
     return binary_str
 
-def interactive_demo():
+def run():
+    """Interactive lesson for converting between binary and decimal."""
     print(f"{BOLD}{MAGENTA}\n✨ Welcome to Binary ↔ Decimal Converter! ✨{RESET}\n")
     while True:
         print(f"{BOLD}Choose an option:{RESET}")
@@ -72,6 +76,7 @@ def interactive_demo():
             print(f"{RED}❌ Invalid choice, try again!{RESET}")
         print()
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
+
 # Run the lesson
 if __name__ == "__main__":
-    interactive_demo()
+    run()

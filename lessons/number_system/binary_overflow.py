@@ -72,9 +72,13 @@ def summary():
     slow_print(f"• Always be careful with fixed-width binary math — bugs love overflow! 🐛{RESET}")
     slow_print(f"\n{BOLD}{GREEN}Well done! You just unlocked the mystery of binary negatives. 💡{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     overflow_demo()
     twos_complement_basics()
     try_it_yourself()
     summary()
+
+if __name__ == "__main__":
+    run()

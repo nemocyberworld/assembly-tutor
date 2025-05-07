@@ -1,5 +1,3 @@
-# lessons/basics/hex_dump_analysis.py
-
 import time
 
 # 🎨 Terminal Colors
@@ -87,12 +85,16 @@ def summary():
     slow_print(f"✔ Each byte of data is represented by two hexadecimal digits, and the ASCII equivalent is shown on the right.")
     slow_print(f"✔ Interpreting hex dumps requires knowledge of how data is encoded and how to map hex values to characters or binary values.")
     slow_print(f"✔ This skill is especially useful for reverse engineering, data analysis, and low-level debugging tasks.")
-    print(f"{GREEN}Well done! You’ve now learned how to read and analyze hex dumps like a pro! 🎉{RESET}")
+    slow_print(f"{GREEN}Well done! You’ve now learned how to read and analyze hex dumps like a pro! 🎉{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     show_hex_dump()
     analyze_hex_dump()
     interpret_data()
     hex_dump_challenge()
     summary()
+
+if __name__ == "__main__":
+    run()

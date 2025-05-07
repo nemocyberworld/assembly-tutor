@@ -1,5 +1,3 @@
-# lessons/basics/hex_ascii.py
-
 import time
 import random
 
@@ -87,9 +85,13 @@ def summary():
     print("✔ Python’s `ord()` and `chr()` let you switch between them")
     print("✔ `format(n, 'X')` shows the hex value of a number{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     show_ascii_table()
     convert_demo()
     ascii_quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

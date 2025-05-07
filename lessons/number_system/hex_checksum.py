@@ -1,5 +1,3 @@
-# lessons/basics/hex_checksum.py
-
 import time
 import random
 
@@ -101,10 +99,14 @@ def summary():
     slow_print("✔ Many protocols use checksums to keep data reliable")
     print(f"{GREEN}Now you can create your own checksums — data protector unlocked! 🛡️{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_checksum()
     demo_checksums()
     interactive_calculator()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

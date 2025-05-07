@@ -36,6 +36,7 @@ def show_control_characters():
     for i in range(32):
         print(f"{YELLOW}{i:3} {RESET}= {RED}{control_names[i]}{RESET}")
         time.sleep(0.02)
+    input(f"\n{YELLOW}Press Enter to see printable characters... {RESET}")
 
 def show_printable_characters():
     print(f"\n{BOLD}{GREEN}🔤 Printable Characters (32–126){RESET}")
@@ -44,6 +45,7 @@ def show_printable_characters():
         if (i - 31) % 6 == 0:
             print()
     print()
+    input(f"\n{YELLOW}Press Enter to use the lookup tool... {RESET}")
 
 def ascii_lookup():
     print(f"\n{BOLD}{MAGENTA}🔍 ASCII Lookup Tool{RESET}")
@@ -62,6 +64,7 @@ def ascii_lookup():
         print(f"{GREEN}Character '{user_input}' = ASCII {ord(user_input)}{RESET}")
     else:
         print(f"{RED}❌ Please enter just one character or a number.{RESET}")
+    input(f"\n{YELLOW}Press Enter to start the quiz... {RESET}")
 
 def quiz():
     print(f"\n{BOLD}{BLUE}🎮 ASCII Table Quiz!{RESET}")
@@ -106,10 +109,14 @@ def summary():
     slow_print("✔ Use `ord()` and `chr()` in Python to convert easily.")
     print(f"{GREEN}Now you know what your keyboard is really saying! 😎{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     show_control_characters()
     show_printable_characters()
     ascii_lookup()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

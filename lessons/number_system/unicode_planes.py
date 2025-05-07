@@ -112,10 +112,14 @@ def summary():
     slow_print(f"✔ Python makes it easy to work with Unicode codepoints and encode/decode characters.")
     print(f"{GREEN}Keep exploring Unicode, and you'll unlock more amazing characters and symbols! 🌟{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_unicode_planes()
     explore_unicode_planes()
     explore_unicode_codepoints()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

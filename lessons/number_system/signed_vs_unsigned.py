@@ -71,8 +71,11 @@ def summary():
     slow_print(f"\n{GREEN}Now you understand the secret double life of binary numbers! 🕵️‍♂️{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
 
-if __name__ == "__main__":
+def run():
     print_intro()
     show_example()
     user_test()
     summary()
+
+if __name__ == "__main__":
+    run()

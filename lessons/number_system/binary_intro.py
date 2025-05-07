@@ -18,15 +18,15 @@ def slow_print(text, delay=0.07):
         time.sleep(delay)
     print()
 
-def run():
+def intro():
     print(f"\n{BOLD}🤖 Welcome to Binary Land!{RESET}")
     time.sleep(1)
-
     slow_print(f"{CYAN}🌟 What if I told you computers can't count past 1?{RESET}")
     slow_print("😲 It's true! Computers only know two things:")
     slow_print(f"{GREEN}1 = ON 🔆{RESET} and {YELLOW}0 = OFF 🌑{RESET}")
     print()
 
+def main_lesson():
     # 🎯 Goal
     slow_print(f"{MAGENTA}🎯 Your Mission:{RESET}")
     slow_print("Learn how to read, write, and think in binary — the secret language of machines!\n")
@@ -77,7 +77,7 @@ def run():
     slow_print(f"{BOLD}a | b = {a | b}{RESET}  → OR")
     slow_print(f"{BOLD}a ^ b = {a ^ b}{RESET}  → XOR\n")
 
-    # 🎓 Wrap-up
+def summary():
     slow_print(f"{BLUE}📚 What You Learned:{RESET}")
     slow_print("✅ Computers use binary (just 0s and 1s) to do *everything*.")
     slow_print("✅ You can convert with `bin()` and `int(x, 2)`.")
@@ -86,6 +86,12 @@ def run():
     slow_print(f"{GREEN}{BOLD}🎉 You just took your first step into the matrix! 🧩{RESET}")
     slow_print(f"{CYAN}Next up: Learn how to do math and logic in binary! 🧠💡{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
+
+def run():
+    intro()
+    main_lesson()
+    summary()
+
 # Run this when the file is executed
 if __name__ == "__main__":
     run()

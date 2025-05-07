@@ -1,5 +1,3 @@
-# lessons/basics/hex_math.py
-
 import time
 
 # 🎨 Terminal Colors
@@ -122,9 +120,13 @@ def summary():
     slow_print(f"✔ Hex math and logic are crucial in fields like low-level programming, embedded systems, and cryptography.")
     print(f"{GREEN}Awesome! You now have a strong understanding of hex arithmetic and logic! 🧑‍💻💡{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     hex_arithmetic()
     hex_logical_operations()
     hex_math_practice()
     summary()
+
+if __name__ == "__main__":
+    run()

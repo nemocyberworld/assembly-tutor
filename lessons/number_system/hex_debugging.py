@@ -1,5 +1,3 @@
-# lessons/basics/hex_debugging.py
-
 import random
 import time
 import struct
@@ -95,7 +93,8 @@ def summary():
     slow_print("✔ You can simulate and explore memory behavior using Python!")
     print(f"{GREEN}You're now a debugger with X-ray vision into the stack! 🕵️‍♂️{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_debugging()
     view_memory_simulated(b"Debug")
@@ -103,3 +102,6 @@ if __name__ == "__main__":
     interactive_memory_viewer()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

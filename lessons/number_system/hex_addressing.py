@@ -1,5 +1,3 @@
-# lessons/basics/hex_addressing.py
-
 import random
 import time
 
@@ -91,7 +89,8 @@ def summary():
     slow_print("✔ Offsets allow us to refer to specific locations within a memory block or array.")
     print(f"{GREEN}You're on your way to mastering memory management with hex! 🧠💻{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_memory()
     memory_address_demo()
@@ -99,3 +98,6 @@ if __name__ == "__main__":
     demo_offsets()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

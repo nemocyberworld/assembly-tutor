@@ -75,7 +75,11 @@ def summary():
     slow_print("✔ You can recognize patterns (like 0xC3 or 0xF0) in multibyte characters.")
     print(f"{GREEN}Keep practicing and soon you’ll be reading bytes like books! 📘{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

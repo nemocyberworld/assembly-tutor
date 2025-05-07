@@ -1,5 +1,3 @@
-# lessons/basics/hex_colors.py
-
 import random
 import time
 
@@ -125,7 +123,8 @@ def summary():
     slow_print(f"✔ You can easily convert between hex and RGB to work with colors programmatically.")
     print(f"{GREEN}Awesome! You’re now ready to use hex colors in your web projects! 🎨💻{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_hex_colors()
     color_demo()
@@ -133,3 +132,6 @@ if __name__ == "__main__":
     rgb_to_hex()
     color_quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

@@ -105,10 +105,14 @@ def summary():
     slow_print("✔ You can decode hex bytecode into readable instructions.")
     print(f"{GREEN}Now you’ve got a glimpse into the language of machines! ⚙️{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
-if __name__ == "__main__":
+
+def run():
     intro()
     explain_bytecode()
     show_sample_bytecode()
     interactive_decoder()
     quiz()
     summary()
+
+if __name__ == "__main__":
+    run()

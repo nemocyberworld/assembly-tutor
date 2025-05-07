@@ -35,10 +35,12 @@ def show_masking_demo(value, mask):
     slow_print(f"Each bit in the result is ON only if it was ON in both value and mask!")
     slow_print("This is called a bitwise AND (&).")
 
-def interactive_masking_lesson():
+def intro():
     print(f"{BOLD}{MAGENTA}🎓 Welcome to Binary Masking 101! 🎓{RESET}")
-    print(f"{BLUE}We'll use masks to isolate specific bits in a byte (0–255).{RESET}")
-    
+    slow_print(f"{BLUE}We'll use masks to isolate specific bits in a byte (0–255).{RESET}")
+    time.sleep(0.5)
+
+def masking_lesson():
     while True:
         try:
             val = int(input(f"\n{YELLOW}Enter a number (0–255) to analyze: {RESET}"))
@@ -69,11 +71,19 @@ def interactive_masking_lesson():
 
             again = input(f"\n{BLUE}Do you want to try another? (y/n): {RESET}").lower()
             if again != 'y':
-                print(f"{GREEN}👋 Goodbye! May your bits always align!{RESET}")
                 break
 
         except ValueError:
             print(f"{RED}❌ Please enter valid integers only.{RESET}")
+
+def summary():
+    slow_print(f"\n{GREEN}👋 Goodbye! May your bits always align!{RESET}")
     input(f"\n{BOLD}➡️ Press Enter to go back to the lesson list...{RESET}")
+
+def run():
+    intro()
+    masking_lesson()
+    summary()
+
 if __name__ == "__main__":
-    interactive_masking_lesson()
+    run()
