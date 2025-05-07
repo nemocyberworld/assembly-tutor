@@ -1,5 +1,7 @@
 # Assembly Tutor
 
+![1746619148907](image/README/1746619148907.png)
+
 Welcome to the **Assembly Tutor** project! This project is designed to help you learn assembly language programming through a series of interactive lessons and practice exercises. It covers everything from basic concepts like binary math and registers to advanced topics like anti-debugging techniques and ROP chains.
 
 ## Project Structure
