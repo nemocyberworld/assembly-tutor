@@ -1,0 +1,86 @@
+# lessons/practice_programs/fibonacci_loop.py
+
+import time
+
+# ANSI Colors
+CYAN = "\033[96m"
+GREEN = "\033[92m"
+YELLOW = "\033[93m"
+MAGENTA = "\033[95m"
+BLUE = "\033[94m"
+DIM = "\033[2m"
+BOLD = "\033[1m"
+RESET = "\033[0m"
+
+def slow_print(text, delay=0.03):
+    for char in text:
+        print(char, end='', flush=True)
+        time.sleep(delay)
+    print()
+
+def run():
+    print(f"\n{BOLD}🌀 Lesson: Print Fibonacci Numbers Using a Loop{RESET}\n")
+    time.sleep(1)
+
+    slow_print(f"{CYAN}🎯 Goal:{RESET} Use a loop in x86-64 assembly to print the first few numbers of the Fibonacci sequence.\n")
+    time.sleep(0.5)
+
+    slow_print(f"{BLUE}📚 What’s the Fibonacci Sequence?{RESET}")
+    slow_print("It’s a magical pattern where each number is the sum of the previous two:")
+    slow_print("  0, 1, 1, 2, 3, 5, 8, 13, 21...\n")
+
+    slow_print(f"{YELLOW}🔧 Instructions:{RESET}")
+    instructions = [
+        "1️⃣  Initialize two registers with 0 and 1 (e.g., `rax` = 0, `rbx` = 1).",
+        "2️⃣  Use a loop and calculate the next number by adding the previous two.",
+        "3️⃣  Swap values to keep the sequence going.",
+        "4️⃣  Repeat for N iterations (e.g., 10 numbers).",
+        "5️⃣  (Optional) Print each number using a syscall or fake it with comments."
+    ]
+    for line in instructions:
+        slow_print(f"{MAGENTA}{line}{RESET}")
+        time.sleep(0.3)
+
+    slow_print(f"\n{BOLD}🧠 Example Code (conceptual):{RESET}")
+    print(f"""{DIM}
+section .text
+global _start
+
+_start:
+    mov     rax, 0          ; first number
+    mov     rbx, 1          ; second number
+    mov     rcx, 10         ; counter for 10 Fibonacci numbers
+
+fib_loop:
+    cmp     rcx, 0
+    je      end_fib
+
+    ; pretend we're printing rax here
+    ; e.g., syscall to print number
+
+    mov     rdx, rax        ; save rax
+    add     rax, rbx        ; next = a + b
+    mov     rbx, rdx        ; b = old a
+
+    dec     rcx             ; count down
+    jmp     fib_loop
+
+end_fib:
+    mov     rax, 60         ; syscall: exit
+    xor     rdi, rdi
+    syscall
+{RESET}""")
+
+    slow_print(f"\n{GREEN}🎯 Your Task:{RESET} Try this loop and watch the values change. You can use `gdb` to inspect values or add print functionality.")
+
+    slow_print(f"\n{BLUE}💡 Tips:{RESET}")
+    slow_print("  - Fibonacci grows fast! Be careful with overflow if you go too far.")
+    slow_print("  - Swapping registers keeps your sequence correct.")
+    slow_print("  - Want a challenge? Store each number in memory or print them properly.\n")
+
+    slow_print(f"{BOLD}🎁 Bonus Challenge:{RESET}")
+    slow_print("  - Print numbers using syscalls instead of comments.")
+    slow_print("  - Make the number of Fibonacci terms dynamic using user input.")
+    slow_print("  - Store the full sequence in an array in memory.\n")
+
+    slow_print(f"{CYAN}🚀 That’s it! You just simulated a classic algorithm in raw assembly. Next stop: CPU wizardry! 🧙‍♂️{RESET}\n")
