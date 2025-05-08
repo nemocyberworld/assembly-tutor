@@ -65,3 +65,5 @@ def run():
     time.sleep(1)
 
     print(f"\n{BOLD}📚 Lesson complete! What would you like to do next?{RESET}")
+    input(f"{BOLD}➡️ Press Enter to return to the lesson list...{RESET}")
+
