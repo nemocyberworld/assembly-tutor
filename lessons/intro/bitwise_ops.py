@@ -9,7 +9,7 @@ RED = "\033[91m"
 BOLD = "\033[1m"
 RESET = "\033[0m"
 
-def slow_print(text, delay=0.03):
+def slow_print(text, delay=0.07):
     for char in text:
         print(char, end='', flush=True)
         time.sleep(delay)
