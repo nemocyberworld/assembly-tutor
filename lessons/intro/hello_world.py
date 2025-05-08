@@ -83,3 +83,4 @@ def run():
     slow_print(f"{BOLD}🎉 Great job! You've written and understood your very first Assembly program!{RESET}", 0.07)
     slow_print(f"{BOLD}{CYAN}Keep going — the CPU is your playground! 🧠💻{RESET}\n", 0.07)
     time.sleep(0.5)
+    input(f"{BOLD}➡️ Press Enter to return to the lesson list...{RESET}")
