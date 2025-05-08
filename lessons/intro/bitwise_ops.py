@@ -91,4 +91,5 @@ def run():
     time.sleep(1)
 
     print(f"\n{BOLD}📚 Lesson complete! Ready to bit-flip your way to mastery?{RESET}")
-    lessons/intro/arithmetic.py
+    input(f"{BOLD}➡️ Press Enter to return to the lesson list...{RESET}")
+
